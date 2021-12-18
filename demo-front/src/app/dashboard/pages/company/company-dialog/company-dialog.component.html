@@ -1,0 +1,17 @@
+<div class="form-dialog">
+  <h2>{{data.Id ? "Update" : "Add"}} company</h2>
+  <div class="form-content">
+    <mat-form-field class="w-100" appearance="legacy">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="data.Name">
+    </mat-form-field>
+    <mat-form-field class="w-100" appearance="legacy">
+      <mat-label>Website</mat-label>
+      <input matInput  [(ngModel)]="data.Website">
+    </mat-form-field>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button mat-button color="primary" (click)="onSave(true)">{{data.Id ? "Update" : "Add"}}</button>
+    <button mat-button (click)="onSave(false)">Cancel</button>
+  </div>
+</div>

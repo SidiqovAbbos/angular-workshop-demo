@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="app-toolbar">
+  <button mat-icon-button class="example-icon" (click)="drawer.toggle()"
+      aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+      <mat-nav-list class="nav-list">
+          <mat-list-item >
+             <a  routerLink="/company">Company</a>
+          </mat-list-item>
+          <mat-list-item >
+              <a  routerLink="/customer">Customer</a>
+           </mat-list-item>
+        </mat-nav-list>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-drawer-container>
